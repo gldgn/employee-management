@@ -1,0 +1,254 @@
+:root {
+  --brand: #ff6200;
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: var(--text);
+  font-family: sans-serif;
+  letter-spacing: 0.2px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.card {
+  background: var(--bg);
+  border-radius: 2px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+}
+.input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+label {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #111;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 80px;
+  margin: 30px;
+}
+@media (max-width: 800px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  align-items: center;
+}
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+}
+.table thead th {
+  font-weight: 400;
+  color: #ff6200;
+  font-size: 13px;
+}
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f5f5f5;
+  border: 1px solid #eee;
+}
+.icon-btn {
+  background: #fff;
+  border: 0px solid #eee;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn img {
+  display: block;
+  height: 20px;
+  width: 40px;
+  height: 40px;
+}
+.actions img {
+  height: 26px;
+  width: auto;
+}
+.logo {
+  height: 40px;
+  width: auto;
+}
+nav.app {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+nav.app .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0px 5px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: #111;
+}
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #fff3eb;
+  border: 1px solid #ffd9bf;
+  color: #8a3a00;
+}
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  font-size: 20px;
+}
+.pagination button {
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.modal header {
+  padding: 16px 16px 0;
+  font-weight: 700;
+}
+.modal .content {
+  padding: 16px;
+}
+.modal footer {
+  padding: 0 16px 16px;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.delete-btn-img {
+  height: 36px;
+  width: auto;
+}
+.link {
+  font-size: 12px;
+  padding: 8px 5px;
+  color: #e69e7b;
+  text-decoration: none;
+}
+.link.active {
+  color: #ff6200;
+  text-decoration: none;
+}
+.search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.search input {
+  width: 260px;
+}
+.grid-buttons {
+  width: 100px;
+  height: 45px;
+}
+@media (max-width: 700px) {
+  .search input {
+    width: 160px;
+  }
+}
+button {
+  border: none;
+  background: none;
+}
+
+/* Additions for language switcher and orange headings */
+.orange {
+  color: var(--brand);
+}
+.list-label {
+  color: grey;
+  font-weight: 300;
+}
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.lang-switch .icon-btn {
+  border: none;
+  background: transparent;
+  padding: 10px;
+}
+.lang-switch .flag {
+  font-size: 20px;
+  line-height: 1;
+}
+button img {
+  cursor: pointer;
+}
